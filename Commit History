@@ -1,0 +1,52 @@
+Commit history
+
+---
+
+## **Commit History Summary – Text Analysis Tool (TAT)**
+
+1. **Initial Implementation**
+
+   * Wrote a basic Text Analysis Tool using only Week 1–4 Python concepts.
+   * Included functions for:
+
+     * Inputting text
+     * Tokenizing text
+     * Counting word frequencies
+     * Simple plotting
+   * Used `isalnum()` which removed apostrophes (e.g., `"can't"` → `"cant"`).
+
+2. **Apostrophe Handling Improvement (Claude Option 1)**
+
+   * Updated tokenization function to keep apostrophes within words.
+   * Prevented unwanted removal of contractions (e.g., `"can't"` stays `"can't"`).
+
+3. **Pandas Integration**
+
+   * Replaced manual frequency counting with `pandas.Series.value_counts()`.
+   * This simplified code and improved efficiency.
+
+4. **Matplotlib Integration**
+
+   * Added a bar chart to visualise top 10 most frequent words.
+   * Implemented both **saving** and **non-saving** approaches for charts.
+
+5. **Menu System with pyinputplus**
+
+   * Added a console-based menu using `pyinputplus` to meet user interface requirements.
+   * Original menu allowed step-by-step process (input → tokenize → count → plot).
+
+6. **Simplified Workflow**
+
+   * Adjusted flow so the user can just input text and automatically see:
+
+     * Word count
+     * Top 10 frequent words
+     * Bar chart
+   * Removed unnecessary step-by-step tokenization/counting for ease of use.
+
+7. **Pythonic Refactoring**
+
+   * Made code more concise and readable by using list comprehensions and cleaner logic.
+   * Confirmed that switching to generators for this dataset size would not give significant benefits, so no change was made.
+
+---
